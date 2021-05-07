@@ -16,6 +16,6 @@ object Jokyu {
     def flatMap[B](f: A => Option[B]): Option[B] = map(f) getOrElse None
   }
 
-  case class Some[+A](get: A) extends Option[A]
-  case object None extends Option[Nothing]
+  final case class Some[+A](get: A) extends Option[A]
+  final case object None extends Option[Nothing]
 }

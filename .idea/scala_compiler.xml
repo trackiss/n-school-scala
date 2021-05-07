@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="n-school-scala" />
+    <profile name="sbt 1" modules="n-school-scala">
+      <parameters>
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.AnyVal" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ArrayEquals" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.AsInstanceOf" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.DefaultArguments" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.EitherProjectionPartial" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Enumeration" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ExplicitImplicitTypes" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.FinalCaseClass" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.FinalVal" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.GlobalExecutionContext" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ImplicitConversion" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ImplicitParameter" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.IsInstanceOf" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.JavaConversions" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.LeakingSealed" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ListUnapply" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.MutableDataStructures" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.NonUnitStatements" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Nothing" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Null" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Option2Iterable" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.OptionPartial" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.PlatformDefault" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.PublicInference" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Return" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.StringPlusAny" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ToString" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.TraversableOps" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.TryPartial" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.While" />
+        <parameter value="-encoding" />
+        <parameter value="utf-8" />
+      </parameters>
+      <plugins>
+        <plugin path="$PROJECT_DIR$/target/compiler_plugins/wartremover_2.13.5-2.4.13.jar" />
+      </plugins>
+    </profile>
   </component>
 </project>
