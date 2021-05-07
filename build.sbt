@@ -10,11 +10,12 @@ val mockitoV = "3.9.0"
 val scalaTestV = "3.2.8"
 
 libraryDependencies ++= Seq(
+  "org.scala-lang" % "scala-reflect" % scalaVersion.value,
   "org.mockito" % "mockito-core" % mockitoV % Test,
   "org.scalatest" %% "scalatest" % scalaTestV % Test
 )
 
-scalacOptions ++= Seq("-encoding", "utf-8")
+scalacOptions ++= Seq("-encoding", "-language:experimental.macros", "utf-8")
 
 wartremoverErrors ++= Warts.allBut(
   Wart.Any,
