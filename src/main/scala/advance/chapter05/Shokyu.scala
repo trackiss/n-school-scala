@@ -3,9 +3,9 @@ package advance.chapter05
 
 object Shokyu {
   def foo(): Unit = {
-    var l1: List[Int] = List.empty
+    var l1 = List[Int]()
     var a1: Array[Int] = Array.empty
-    var l2: List[Int] = List.empty
+    var l2 = List[Int]()
     var a2: Array[Int] = Array.empty
 
     benchmark {

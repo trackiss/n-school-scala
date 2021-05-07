@@ -14,7 +14,7 @@ object Jokyu {
     }
   }
 
-  case class Left[+E](get: E) extends Either[E, Nothing]
+  final case class Left[+E](get: E) extends Either[E, Nothing]
 
-  case class Right[+A](get: A) extends Either[Nothing, A]
+  final case class Right[+A](get: A) extends Either[Nothing, A]
 }

@@ -6,8 +6,8 @@ import scala.collection.immutable.{HashMap, TreeMap}
 object Jokyu {
   def foo(): Unit = {
     var a: Array[Int] = Array.empty
-    var hm: HashMap[Int, Int] = HashMap.empty
-    var tm: TreeMap[Int, Int] = TreeMap.empty
+    var hm = HashMap[Int, Int]()
+    var tm = TreeMap[Int, Int]()
 
     benchmark {
       a = (0 until 100000).toArray

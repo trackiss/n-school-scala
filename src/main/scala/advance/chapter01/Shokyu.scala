@@ -5,6 +5,6 @@ import scala.annotation.tailrec
 
 object Shokyu {
   @tailrec
-  def fact(n: Int, acc: Int = 1): Int =
+  def fact(n: Int, acc: Int): Int =
     if (n <= 1) acc else fact(n - 1, acc * n)
 }

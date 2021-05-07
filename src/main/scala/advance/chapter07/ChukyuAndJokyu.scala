@@ -14,9 +14,10 @@ object ChukyuAndJokyu {
     }
   }
 
-  case object EmptyLazyList extends LazyList[Nothing]
+  final case object EmptyLazyList extends LazyList[Nothing]
 
-  case class Cons[+A](h: () => A, t: () => LazyList[A]) extends LazyList[A]
+  final case class Cons[+A](h: () => A, t: () => LazyList[A])
+      extends LazyList[A]
 
   object LazyList {
     def cons[A](h: => A, t: => LazyList[A]): LazyList[A] = {
