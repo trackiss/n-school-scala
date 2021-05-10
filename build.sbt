@@ -32,9 +32,14 @@ lazy val root = (project in file("."))
     version := "0.0.1"
   )
 
+lazy val parserCombinatorsV = "1.1.2"
+
 lazy val parser = (project in file("parser"))
   .settings(globalSettings: _*)
   .settings(
     name := "my-parser",
+    libraryDependencies ++= Seq(
+      "org.scala-lang.modules" %% "scala-parser-combinators" % parserCombinatorsV
+    ),
     version := "0.0.1"
   )
