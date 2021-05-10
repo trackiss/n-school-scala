@@ -1,4 +1,5 @@
 lazy val mockitoV = "3.9.0"
+lazy val parserCombinatorsV = "1.1.2"
 lazy val scalaTestV = "3.2.8"
 
 lazy val globalSettings = Seq(
@@ -6,6 +7,7 @@ lazy val globalSettings = Seq(
   libraryDependencies ++= Seq(
     "org.scala-lang" % "scala-reflect" % scalaVersion.value,
     "org.mockito" % "mockito-core" % mockitoV % Test,
+    "org.scala-lang.modules" %% "scala-parser-combinators" % parserCombinatorsV,
     "org.scalatest" %% "scalatest" % scalaTestV % Test
   ),
   scalacOptions ++= Seq("-encoding", "-language:experimental.macros", "utf-8"),
@@ -25,21 +27,8 @@ lazy val globalSettings = Seq(
 )
 
 lazy val root = (project in file("."))
-  .aggregate(parser)
   .settings(globalSettings: _*)
   .settings(
     name := "n-school-scala",
-    version := "0.0.1"
-  )
-
-lazy val parserCombinatorsV = "1.1.2"
-
-lazy val parser = (project in file("parser"))
-  .settings(globalSettings: _*)
-  .settings(
-    name := "my-parser",
-    libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-parser-combinators" % parserCombinatorsV
-    ),
     version := "0.0.1"
   )
