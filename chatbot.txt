@@ -1,0 +1,15 @@
+(chatbot
+    (time "time" 5 12 "Asia/Tokyo" (
+        "早起きだね"
+        "おはよう"
+    ))
+    (reply "reply" (
+        "こんにちは"
+        "よろしくね"
+    ))
+    (set-values (
+        (1: "Apple")
+        (2: "Orange")
+        (3: "Grape")
+    ))
+)
