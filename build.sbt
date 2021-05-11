@@ -18,10 +18,13 @@ lazy val globalSettings = Seq(
     Wart.JavaSerializable,
     Wart.ListAppend,
     Wart.Overloading,
+    Wart.PlatformDefault,
     Wart.Product,
     Wart.Recursion,
     Wart.Serializable,
+    Wart.StringPlusAny,
     Wart.Throw,
+    Wart.ToString,
     Wart.Var
   )
 )

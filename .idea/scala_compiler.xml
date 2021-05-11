@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="my-parser,n-school-scala">
+    <profile name="sbt 1" modules="n-school-scala">
       <option name="macros" value="true" />
       <parameters>
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.AnyVal" />
@@ -26,11 +26,8 @@
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.Null" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.Option2Iterable" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.OptionPartial" />
-        <parameter value="-P:wartremover:traverser:org.wartremover.warts.PlatformDefault" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.PublicInference" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.Return" />
-        <parameter value="-P:wartremover:traverser:org.wartremover.warts.StringPlusAny" />
-        <parameter value="-P:wartremover:traverser:org.wartremover.warts.ToString" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.TraversableOps" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.TryPartial" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.While" />
