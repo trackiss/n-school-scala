@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="n-school-scala">
+      <plugins>
+        <plugin path="$PROJECT_DIR$/target/compiler_plugins/wartremover_2.12.13-2.4.13.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 2" modules="advance">
       <option name="macros" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
       <parameters>
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.AnyVal" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.ArrayEquals" />
@@ -31,8 +39,32 @@
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.TraversableOps" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.TryPartial" />
         <parameter value="-P:wartremover:traverser:org.wartremover.warts.While" />
+        <parameter value="-Xlint" />
+        <parameter value="-Ywarn-dead-code" />
+        <parameter value="-Ywarn-nullary-override" />
+        <parameter value="-Ywarn-nullary-unit" />
+        <parameter value="-Ywarn-numeric-widen" />
+        <parameter value="-Ywarn-unused" />
+        <parameter value="-Ywarn-unused-import" />
         <parameter value="-encoding" />
         <parameter value="utf-8" />
+      </parameters>
+      <plugins>
+        <plugin path="$PROJECT_DIR$/target/compiler_plugins/wartremover_2.13.5-2.4.13.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 3" modules="concurrent">
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-Xlint" />
+        <parameter value="-Ywarn-dead-code" />
+        <parameter value="-Ywarn-nullary-override" />
+        <parameter value="-Ywarn-nullary-unit" />
+        <parameter value="-Ywarn-numeric-widen" />
+        <parameter value="-Ywarn-unused" />
+        <parameter value="-Ywarn-unused-import" />
       </parameters>
       <plugins>
         <plugin path="$PROJECT_DIR$/target/compiler_plugins/wartremover_2.13.5-2.4.13.jar" />
