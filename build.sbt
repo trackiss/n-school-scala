@@ -9,12 +9,7 @@ lazy val globalSettings = Seq(
     "-feature",
     "-unchecked",
     "-Xlint",
-    "-Ywarn-dead-code",
-    "-Ywarn-nullary-override",
-    "-Ywarn-nullary-unit",
-    "-Ywarn-numeric-widen",
-    "-Ywarn-unused",
-    "-Ywarn-unused-import"
+    "-Wdead-code"
   ),
   scalaVersion := "2.13.5"
 )
