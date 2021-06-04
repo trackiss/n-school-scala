@@ -14,7 +14,7 @@ object Jokyu {
         println(s"Runnable: $i finished.")
       })
 
-    (1 to 20) foreach {
+    (1 to 20) foreach { _ =>
       val rs = new Thread(() => {
         while (true) {
           try semaphore.acquire()
