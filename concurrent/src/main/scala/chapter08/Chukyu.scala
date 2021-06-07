@@ -42,7 +42,7 @@ object Chukyu {
   }
 
   def ReplyActorApp(): Unit = {
-    val system = ActorSystem(MainActor(), "greeter-actor")
+    val system = ActorSystem(MainActor(), "main-actor")
     system ! ()
   }
 }
