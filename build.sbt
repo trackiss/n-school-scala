@@ -1,3 +1,5 @@
+lazy val akkaActorV = "2.6.14"
+lazy val logbackV = "1.2.3"
 lazy val mockitoV = "3.9.0"
 lazy val parserCombinatorsV = "1.1.2"
 lazy val scalaTestV = "3.2.8"
@@ -58,5 +60,9 @@ lazy val concurrent = (project in file("concurrent"))
   .settings(globalSettings: _*)
   .settings(
     name := "concurrent",
+    libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-actor-typed" % akkaActorV,
+      "ch.qos.logback" % "logback-classic" % logbackV
+    ),
     version := "0.0.1"
   )
