@@ -1,7 +1,12 @@
 package com.github.trackiss
 package chapter10
 
-import akka.actor.typed.{ActorRef, Behavior, SupervisorStrategy}
+import akka.actor.typed.{
+  ActorRef,
+  Behavior,
+  MailboxSelector,
+  SupervisorStrategy
+}
 import akka.actor.typed.scaladsl.{ActorContext, Behaviors, Routers}
 import okhttp3.OkHttpClient
 
@@ -38,7 +43,8 @@ object Supervisor {
           )
           .withRoundRobinRouting()
 
-      val router = ctx.spawn(pool, "downloader-actors")
+      val router =
+        ctx.spawn(pool, "downloader-actors", MailboxSelector.bounded(10))
       run(ctx, urlsFileLoader, router, config, 0, 0, 0, wnidWordMap)
     }
   }
