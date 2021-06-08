@@ -11,7 +11,7 @@ object ShokyuAndChukyuAndJokyu {
     val wordsFilePath = "/path/to/words.txt"
     val urlsFilePath = "/path/to/fall11_urls.txt"
     val outputDirPath = "/path/to/output"
-    val numOfDownloader = 2000
+    val numOfDownloader = 20
 
     val config =
       Config(wordsFilePath, urlsFilePath, outputDirPath, numOfDownloader)
